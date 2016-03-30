@@ -39,6 +39,7 @@
     CGFloat topPadding = 15.f;
     CGFloat iconView2titleH = 10.f;
     CGFloat cellWidth = self.frame.size.width;
+    CGFloat titleInset = 4;
     
     // 图标
     CGFloat iconViewX = ZY_ItemCellPadding / 2;
@@ -48,9 +49,9 @@
     self.iconView.frame = CGRectMake(iconViewX, iconViewY, iconViewW, iconViewH);
     
     // 标题
-    CGFloat titleViewX = 0;
+    CGFloat titleViewX = -titleInset;
     CGFloat titleViewY = topPadding + iconViewH + iconView2titleH;
-    CGFloat titleViewW = cellWidth;
+    CGFloat titleViewW = cellWidth + 2 * titleInset;
     CGFloat titleViewH = 30.f;
     self.titleView.frame = CGRectMake(titleViewX, titleViewY, titleViewW, titleViewH);
 }
@@ -93,8 +94,8 @@
     if (!_titleView) {
         _titleView = [[UITextView alloc] init];
         _titleView.textColor = [UIColor darkGrayColor];
-        _titleView.font = [UIFont systemFontOfSize:12];
-        _titleView.contentInset = UIEdgeInsetsMake(- 10, 0, 0, 0);
+        _titleView.font = [UIFont systemFontOfSize:11];
+        _titleView.contentInset = UIEdgeInsetsMake(-10, 0, 0, 0);
         _titleView.backgroundColor = nil;
         _titleView.textAlignment = NSTextAlignmentCenter;
         _titleView.userInteractionEnabled = NO;
