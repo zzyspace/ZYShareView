@@ -27,6 +27,10 @@ ZYShareView *shareView = [ZYShareView shareViewWithShareItems:@[item0, item1, it
 [shareView show];
 ```
 
+> Tips: </br>
+> ①item数目过多时, 可以侧滑 </br>
+> ②shareItems表示第一行的分享滑条, functionItems表示第二行的功能滑条. 若不要某一行, 传nil即可.
+
 ### Advanced Usage
 
 #### 1.可以根据自己的需求在`ZYShareViewDefine.h`文件中对UI进行调整
@@ -40,6 +44,13 @@ ZYShareView *shareView = [ZYShareView shareViewWithShareItems:@[item0, item1, it
 
 #define ZY_AnimateDuration          0.3     // 动画时间
 #define ZY_DimBackgroundAlpha       0.3     // 半透明背景的alpha值
+```
+
+#### 2.标题和取消按钮可以自由配置其属性
+
+```Objective-C
+@property (nonatomic, readonly) UILabel *titleLabel;
+@property (nonatomic, readonly) UIButton *cancelButton;
 ```
 
 ## Requirements
