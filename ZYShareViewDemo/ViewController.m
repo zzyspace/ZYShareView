@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "ZYShareView.h"
-#import "MBProgressHUD.h"
 
 @interface ViewController ()
 
@@ -77,14 +76,7 @@
 
 - (void)itemAction:(NSString *)title
 {
-    // 显示提示
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication].windows lastObject] animated:YES];
-    hud.label.text = title;
-    hud.mode = MBProgressHUDModeText;
-    hud.removeFromSuperViewOnHide = YES;
-    hud.userInteractionEnabled = NO;
-    
-    [hud hideAnimated:YES afterDelay:2.0];
+    NSLog(@"%@", title);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

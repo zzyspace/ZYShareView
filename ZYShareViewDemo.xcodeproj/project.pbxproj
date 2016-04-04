@@ -19,7 +19,6 @@
 		5A9DB4591CAAABA4007D998C /* ZYShareSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DB4521CAAABA4007D998C /* ZYShareSheetView.m */; };
 		5A9DB45A1CAAABA4007D998C /* ZYShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DB4541CAAABA4007D998C /* ZYShareView.m */; };
 		5A9DB45C1CAAB16A007D998C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DB45B1CAAB16A007D998C /* Images.xcassets */; };
-		5A9DB4601CAAB46B007D998C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DB45F1CAAB46B007D998C /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +56,6 @@
 		5A9DB4541CAAABA4007D998C /* ZYShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYShareView.m; sourceTree = "<group>"; };
 		5A9DB4551CAAABA4007D998C /* ZYShareViewDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYShareViewDefine.h; sourceTree = "<group>"; };
 		5A9DB45B1CAAB16A007D998C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5A9DB45E1CAAB46B007D998C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		5A9DB45F1CAAB46B007D998C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +105,6 @@
 				5A9DB45B1CAAB16A007D998C /* Images.xcassets */,
 				5A9DB42E1CAAAA44007D998C /* Main.storyboard */,
 				5A9DB4331CAAAA44007D998C /* LaunchScreen.xib */,
-				5A9DB45D1CAAB46B007D998C /* Lib */,
 				5A9DB4241CAAAA44007D998C /* Supporting Files */,
 			);
 			path = ZYShareViewDemo;
@@ -157,15 +153,6 @@
 			);
 			path = ZYShareView;
 			sourceTree = SOURCE_ROOT;
-		};
-		5A9DB45D1CAAB46B007D998C /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				5A9DB45E1CAAB46B007D998C /* MBProgressHUD.h */,
-				5A9DB45F1CAAB46B007D998C /* MBProgressHUD.m */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -271,7 +258,6 @@
 				5A9DB45A1CAAABA4007D998C /* ZYShareView.m in Sources */,
 				5A9DB4571CAAABA4007D998C /* ZYShareItemCell.m in Sources */,
 				5A9DB4581CAAABA4007D998C /* ZYShareSheetCell.m in Sources */,
-				5A9DB4601CAAB46B007D998C /* MBProgressHUD.m in Sources */,
 				5A9DB4561CAAABA4007D998C /* ZYShareItem.m in Sources */,
 				5A9DB4591CAAABA4007D998C /* ZYShareSheetView.m in Sources */,
 				5A9DB42A1CAAAA44007D998C /* AppDelegate.m in Sources */,
@@ -476,6 +462,7 @@
 				5A9DB4461CAAAA44007D998C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A9DB4471CAAAA44007D998C /* Build configuration list for PBXNativeTarget "ZYShareViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +471,7 @@
 				5A9DB4491CAAAA44007D998C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
