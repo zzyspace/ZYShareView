@@ -14,8 +14,8 @@
 ```Objective-C
 // 根据需要创建多个item
 ZYShareItem *item0 = [ZYShareItem itemWithTitle:@"发送给朋友"
-                                               icon:@"Action_Share"
-                                            handler:^{ [weakSelf itemAction:@"点击了发送给朋友"]; }];
+                                           icon:@"Action_Share"
+                                        handler:^{ [weakSelf itemAction:@"点击了发送给朋友"]; }];
 ...
 ```
 
