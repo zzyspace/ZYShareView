@@ -10,6 +10,9 @@
 #import "ZYShareViewDefine.h"
 #import "ZYShareSheetCell.h"
 
+#define ZY_TitleHeight  30.f
+#define ZY_TitlePadding 20.f
+
 @interface ZYShareSheetView () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -44,7 +47,7 @@
     self.frame = frame;
     
     // 标题
-    self.titleLabel.frame = CGRectMake(0, 0, ZY_ScreenWidth, self.titleHeight);
+    self.titleLabel.frame = CGRectMake(ZY_TitlePadding, 0, ZY_ScreenWidth - 2 * ZY_TitlePadding, self.titleHeight);
     
     // 取消按钮
     self.cancelButton.frame = CGRectMake(0, self.frame.size.height - ZY_CancelButtonHeight, ZY_ScreenWidth, ZY_CancelButtonHeight);
@@ -159,7 +162,7 @@
 
 - (CGFloat)titleHeight
 {
-    return self.titleLabel.text.length ? 30 : 0;
+    return self.titleLabel.text.length ? ZY_TitleHeight : 0;
 }
 
 @end

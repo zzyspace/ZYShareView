@@ -165,4 +165,14 @@
     return _dimBackgroundView;
 }
 
+- (UILabel *)titleLabel
+{
+    return self.shareSheetView.titleLabel;
+}
+
+- (UIButton *)cancelButton
+{
+    return self.shareSheetView.cancelButton;
+}
+
 @end

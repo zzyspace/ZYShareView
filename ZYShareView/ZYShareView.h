@@ -11,11 +11,11 @@
 
 @interface ZYShareView : UIView
 
-/** 顶部标题, 默认为"分享" */
-@property (nonatomic, copy) NSString *title;
+/** 顶部标题, 默认内容为"分享" */
+@property (nonatomic, readonly) UILabel *titleLabel;
 
-/** 取消按钮标题, 默认为"取消" */
-@property (nonatomic, copy) NSString *cancelButtonTitle;
+/** 取消按钮, 默认标题为"取消" */
+@property (nonatomic, readonly) UIButton *cancelButton;
 
 /**
  *  创建shareView
@@ -28,6 +28,9 @@
 - (instancetype)initWithShareItems:(NSArray *)shareArray
                      functionItems:(NSArray *)functionArray;
 
+/**
+ *  显示\隐藏
+ */
 - (void)show;
 - (void)hide;
 
