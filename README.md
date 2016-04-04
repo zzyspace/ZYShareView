@@ -1,7 +1,7 @@
 # ZYShareView
 - 应用中常见的分享/功能菜单面板, 高仿微信:-)
 
-![](https://raw.githubusercontent.com/zzyspace/ZYShareView/master/ZYShareViewDemo/share.jpg)
+<img src="https://raw.githubusercontent.com/zzyspace/ZYShareView/master/ZYShareViewDemo/share.jpg" width="560">
 
 ## Usage
 
