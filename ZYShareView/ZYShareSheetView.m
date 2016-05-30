@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *dataArray;
+
 
 @end
 
@@ -84,23 +84,23 @@
 
 #pragma mark - setter
 
-- (void)setShareArray:(NSArray *)shareArray
-{
-    _shareArray = shareArray;
-    
-    if (shareArray.count) {
-        [self.dataArray insertObject:shareArray atIndex:0];
-    }
-}
-
-- (void)setFunctionArray:(NSArray *)functionArray
-{
-    _functionArray = functionArray;
-    
-    if (functionArray) {
-        [self.dataArray addObject:functionArray];
-    }
-}
+//- (void)setShareArray:(NSArray *)shareArray
+//{
+//    _shareArray = shareArray;
+//    
+//    if (shareArray.count) {
+//        [self.dataArray insertObject:shareArray atIndex:0];
+//    }
+//}
+//
+//- (void)setFunctionArray:(NSArray *)functionArray
+//{
+//    _functionArray = functionArray;
+//    
+//    if (functionArray) {
+//        [self.dataArray addObject:functionArray];
+//    }
+//}
 
 #pragma mark - getter
 

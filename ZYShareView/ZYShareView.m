@@ -35,9 +35,16 @@
 - (instancetype)initWithShareItems:(NSArray *)shareArray
                      functionItems:(NSArray *)functionArray
 {
+    return [self initWithItemsArray:@[shareArray ,functionArray]];
+}
+
+- (instancetype)initWithItemsArray:(NSArray *)array
+{
     if (self = [super init]) {
-        self.shareArray = shareArray;
-        self.functionArray = functionArray;
+        //        self.shareArray = shareArray;
+        //        self.functionArray = functionArray;
+        
+        [self.shareSheetView.dataArray addObjectsFromArray:array];
     }
     return self;
 }
@@ -121,19 +128,19 @@
 
 #pragma mark - setter
 
-- (void)setShareArray:(NSArray *)shareArray
-{
-    _shareArray = shareArray;
-    
-    self.shareSheetView.shareArray = shareArray;
-}
-
-- (void)setFunctionArray:(NSArray *)functionArray
-{
-    _functionArray = functionArray;
-    
-    self.shareSheetView.functionArray = functionArray;
-}
+//- (void)setShareArray:(NSArray *)shareArray
+//{
+//    _shareArray = shareArray;
+//    
+//    self.shareSheetView.shareArray = shareArray;
+//}
+//
+//- (void)setFunctionArray:(NSArray *)functionArray
+//{
+//    _functionArray = functionArray;
+//    
+//    self.shareSheetView.functionArray = functionArray;
+//}
 
 #pragma mark - getter
 
