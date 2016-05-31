@@ -29,6 +29,14 @@
                      functionItems:(NSArray *)functionArray;
 
 /**
+ *  增加 任意 行 的API
+ *
+ *  @param array 二维数组
+ *
+ */
+- (instancetype)initWithItemsArray:(NSArray *)array;
+
+/**
  *  显示\隐藏
  */
 - (void)show;

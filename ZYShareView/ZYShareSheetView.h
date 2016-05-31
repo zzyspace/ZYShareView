@@ -13,8 +13,9 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *cancelButton;
 
-@property (nonatomic, strong) NSArray *shareArray;
-@property (nonatomic, strong) NSArray *functionArray;
+//@property (nonatomic, strong) NSArray *shareArray;
+//@property (nonatomic, strong) NSArray *functionArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @property (nonatomic, copy) void (^cancelBlock)();
 
