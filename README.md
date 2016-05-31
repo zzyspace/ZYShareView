@@ -53,6 +53,16 @@ ZYShareView *shareView = [ZYShareView shareViewWithShareItems:@[item0, item1, it
 @property (nonatomic, readonly) UIButton *cancelButton;
 ```
 
+#### 3.可以自由定制n行的item
+
+```Objective-C
+// 创建一个二维数组, 二维数组中的元素即为每一行的`ZYShareItem`数组.
+NSArray *array = @[shareItemsArray, functionItemsArray, otherItemsArray, ...];
+
+ZYShareView *shareView = [[ZYShareView alloc] initWithItemsArray:array];
+[shareView show];
+```
+
 ## Requirements
 
 - iOS 7.0+

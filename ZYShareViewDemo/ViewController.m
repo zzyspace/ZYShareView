@@ -64,11 +64,20 @@
                                                icon:@"Action_Refresh"
                                             handler:^{ [weakSelf itemAction:@"点击了刷新"]; }];
     
+    NSArray *shareItemsArray = @[item0, item1, item2, item3, item4, item5];
+    NSArray *functionItemsArray = @[item6, item7, item8, item9];
+    
     // 创建shareView
-    ZYShareView *shareView = [ZYShareView shareViewWithShareItems:@[item0, item1, item2, item3, item4, item5]
-                                                    functionItems:@[item6, item7, item8, item9]];
+    ZYShareView *shareView = [ZYShareView shareViewWithShareItems:shareItemsArray
+                                                    functionItems:functionItemsArray];
     // 弹出shareView
     [shareView show];
+    
+    /*
+    // OR
+    ZYShareView *shareView = [[ZYShareView alloc] initWithItemsArray:@[shareItemsArray, functionItemsArray]];
+    [shareView show];
+     */
 }
 
 

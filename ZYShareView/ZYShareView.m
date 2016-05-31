@@ -12,9 +12,6 @@
 
 @interface ZYShareView ()
 
-@property (nonatomic, strong) NSArray *shareArray;              /**< 分享item数组 */
-@property (nonatomic, strong) NSArray *functionArray;           /**< 功能item数组 */
-
 @property (nonatomic, strong) ZYShareSheetView *shareSheetView; /**< 分享面板 */
 @property (nonatomic, strong) UIView *dimBackgroundView;        /**< 半透明黑色背景 */
 
@@ -35,15 +32,17 @@
 - (instancetype)initWithShareItems:(NSArray *)shareArray
                      functionItems:(NSArray *)functionArray
 {
-    return [self initWithItemsArray:@[shareArray ,functionArray]];
+    NSMutableArray *itemsArrayM = [NSMutableArray array];
+    
+    if (shareArray.count) [itemsArrayM addObject:shareArray];
+    if (functionArray.count) [itemsArrayM addObject:functionArray];
+    
+    return [self initWithItemsArray:[itemsArrayM copy]];
 }
 
 - (instancetype)initWithItemsArray:(NSArray *)array
 {
     if (self = [super init]) {
-        //        self.shareArray = shareArray;
-        //        self.functionArray = functionArray;
-        
         [self.shareSheetView.dataArray addObjectsFromArray:array];
     }
     return self;
@@ -125,22 +124,6 @@
         self.shareSheetView.frame = frame;
     } completion:completion];
 }
-
-#pragma mark - setter
-
-//- (void)setShareArray:(NSArray *)shareArray
-//{
-//    _shareArray = shareArray;
-//    
-//    self.shareSheetView.shareArray = shareArray;
-//}
-//
-//- (void)setFunctionArray:(NSArray *)functionArray
-//{
-//    _functionArray = functionArray;
-//    
-//    self.shareSheetView.functionArray = functionArray;
-//}
 
 #pragma mark - getter
 
