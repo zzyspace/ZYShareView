@@ -54,6 +54,21 @@
     
     // TableView
     self.tableView.frame = CGRectMake(0, self.titleHeight, ZY_ScreenWidth, self.dataArray.count * ZY_ItemCellHeight);
+    
+    
+    //适配iOS11中UIToolbar无法点击问题
+    if (@available(iOS 11.0, *)) {
+        NSArray *subViewArray = [self subviews];
+        
+        for (id view in subViewArray) {
+            if ([view isKindOfClass:(NSClassFromString(@"_UIToolbarContentView"))]) {
+                UIView *testView = view;
+                testView.userInteractionEnabled = NO;
+            }
+        }
+    }
+    
+    
 }
 
 #pragma mark - Action
